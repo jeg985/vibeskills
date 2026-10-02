@@ -1,0 +1,256 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1c2932;
+  background: #f5f8f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  width: min(100% - 32px, 720px);
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.page-header {
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #277b68;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2.3rem, 7vw, 3.3rem);
+  letter-spacing: -0.04em;
+}
+
+.page-header > p:last-child {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: #52616a;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-bottom: 22px;
+  font-size: 1.35rem;
+}
+
+.panel,
+.skill-card,
+.empty-state {
+  background: #fff;
+  border: 1px solid #dce7e2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(28, 41, 50, 0.04);
+}
+
+.panel {
+  padding: 28px;
+}
+
+.form-fields {
+  display: flex;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-progress {
+  width: 180px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #b9c9c2;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #77cbb4;
+  outline-offset: 2px;
+}
+
+.number-field {
+  position: relative;
+}
+
+.number-field input {
+  padding-right: 32px;
+}
+
+.number-field span {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  color: #52616a;
+  transform: translateY(-50%);
+}
+
+.message {
+  margin: 10px 0;
+  color: #a03931;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.message:empty {
+  display: none;
+}
+
+.button {
+  min-height: 42px;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: #247c64;
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: #19664f;
+}
+
+.button-secondary {
+  border-color: #b9c9c2;
+  background: #fff;
+  color: #1c2932;
+}
+
+.button-secondary:hover {
+  background: #f1f6f3;
+}
+
+.button-delete {
+  color: #a03931;
+}
+
+.skills-section {
+  margin-top: 42px;
+}
+
+.empty-state {
+  padding: 28px;
+  color: #52616a;
+  text-align: center;
+}
+
+.skill-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-card {
+  padding: 22px;
+}
+
+.skill-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.skill-heading h3 {
+  overflow-wrap: anywhere;
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.skill-heading span {
+  flex: none;
+  color: #247c64;
+  font-weight: 700;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin-bottom: 18px;
+  accent-color: #247c64;
+}
+
+.skill-actions {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+
+.skill-actions .field {
+  width: 150px;
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding-top: 36px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .form-fields {
+    flex-direction: column;
+  }
+
+  .field-progress {
+    width: 100%;
+  }
+
+  .skill-actions {
+    flex-wrap: wrap;
+  }
+
+  .skill-actions .field {
+    width: 100%;
+  }
+}

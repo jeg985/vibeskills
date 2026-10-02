@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeSkills</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Your learning, one step at a time</p>
+        <h1>VibeSkills</h1>
+        <p>Keep track of the skills you're learning and how far you've come.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="add-heading">
+        <h2 id="add-heading">Add a skill</h2>
+        <form id="add-skill-form" novalidate>
+          <div class="form-fields">
+            <div class="field field-name">
+              <label for="skill-name">Skill name</label>
+              <input id="skill-name" name="skill-name" type="text" placeholder="e.g. JavaScript" required />
+            </div>
+            <div class="field field-progress">
+              <label for="skill-progress">Starting progress</label>
+              <div class="number-field">
+                <input id="skill-progress" name="skill-progress" type="number" min="0" max="100" step="1" value="0" required />
+                <span aria-hidden="true">%</span>
+              </div>
+            </div>
+          </div>
+          <p id="form-message" class="message" role="alert"></p>
+          <button class="button button-primary" type="submit">Add skill</button>
+        </form>
+      </section>
+
+      <section class="skills-section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">My skills</h2>
+        <p id="storage-message" class="message" role="alert"></p>
+        <p id="empty-message" class="empty-state">No skills yet. Add one above to get started.</p>
+        <ul id="skill-list" class="skill-list" aria-label="Skills"></ul>
+      </section>
+    </main>
+  </body>
+</html>
